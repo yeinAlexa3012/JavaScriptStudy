@@ -25,7 +25,7 @@ Existe(posSandia)
 Determina si existe algún número divisible entre 3 y mayor que 20.*/
 const numeros = [12, 7, 5, 18, 21, 30]
 const ExisteMayorQue3 = numeros.some(num => num % 3 === 0 && num > 20)
-if(ExisteMayorQue3 === true){
+if(ExisteMayorQue3){
     console.log("Si existe")
 }else{
     console.log("No existe")
@@ -35,7 +35,7 @@ if(ExisteMayorQue3 === true){
 Determina si todos los nombres tienen al menos 3 letras. */
 const nombres = ['Leo', 'Isabella', 'Ian', 'Lea', 'Alexander']
 const TieneMas3 = nombres.every(nom => nom.length > 3)
-if(TieneMas3 === true){
+if(TieneMas3){
     console.log("Todos los nombres tienen mas de 3 letras")
 }else{
     console.log("Falso")
@@ -63,7 +63,7 @@ const productos = [
   ]
 
 const ExisteMasDeMil = productos.some(prod => prod.precio > 1000)
-if(ExisteMayorQue3 === true){
+if(ExisteMasDeMil){
     console.log("Si existe")
 }else{
     console.log("No existe")
@@ -91,7 +91,7 @@ const productos3 = [
     { nombre: 'Monitor', precio: 300 }
 ]
 
-const MenosCien = productos3.findIndex(pro => pro < 100)
+const MenosCien = productos3.findIndex(pro => pro.precio < 100)
 console.log(`La posicion es ${MenosCien}`)
 
 
@@ -101,7 +101,7 @@ Determina si existe alguna palabra con más de 8 caracteres.*/
 const palabras = ['javascript', 'html', 'css', 'react']
 
 const PalabraLarga = palabras.some(pal => pal.length > 8)
-if(ExisteMayorQue3 === true){
+if(PalabraLarga){
     console.log("Si hay")
 }else{
     console.log("No hay")
@@ -112,7 +112,7 @@ Determina si todas las palabras tienen exactamente 3 letras.*/
 
 const palabras2 = ['sol', 'mar', 'pan', 'luz']
 const PalabraCorta = palabras.every(pal => pal.length === 3)
-if(ExisteMayorQue3 === true){
+if(PalabraCorta){
     console.log("Todos tienen 3 letras")
 }else{
     console.log("No todos")
@@ -123,3 +123,24 @@ Obtén el primer número positivo.*/
 const numeros2 = [-5, -10, 3, 8, 15]
 const NumeroPositivo = numeros2.find(num => num > 0)
 console.log(NumeroPositivo)
+
+/*Ejercicio 12
+Obtén la posición del primer número positivo.*/
+const numeros3 = [-5, -10, 3, 8, 15]
+const PosicionPositivo = numeros3.findIndex(num => num > 0)
+console.log(PosicionPositivo)
+
+/*Ejercicio 13
+Determina si todos los usuarios son mayores de edad.*/
+const usuarios = [
+  { nombre: 'Ana', edad: 17 },
+  { nombre: 'Luis', edad: 22 },
+  { nombre: 'Carlos', edad: 30 },
+  { nombre: 'Eva', edad: 15 }
+]
+const TodosMayores = usuarios.every(usu => usu.edad > 18)
+if(TodosMayores){
+    console.log("Todos son mayores")
+}else{
+    console.log("No todos")
+}
